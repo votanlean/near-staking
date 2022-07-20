@@ -1,0 +1,2 @@
+cargo:rustc-env=TYPENUM_BUILD_CONSTS=/Users/alex/near/near-staking/contract/target/rls/debug/build/typenum-5f00231cc8b28fea/out/consts.rs
+cargo:rustc-env=TYPENUM_BUILD_OP=/Users/alex/near/near-staking/contract/target/rls/debug/build/typenum-5f00231cc8b28fea/out/op.rs

@@ -1,0 +1,13 @@
+/Users/alex/near/near-staking/contract/target/debug/deps/quote-0736d599ecbbde19.rmeta: /Users/alex/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.20/src/lib.rs /Users/alex/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.20/src/ext.rs /Users/alex/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.20/src/format.rs /Users/alex/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.20/src/ident_fragment.rs /Users/alex/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.20/src/to_tokens.rs /Users/alex/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.20/src/runtime.rs /Users/alex/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.20/src/spanned.rs
+
+/Users/alex/near/near-staking/contract/target/debug/deps/libquote-0736d599ecbbde19.rlib: /Users/alex/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.20/src/lib.rs /Users/alex/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.20/src/ext.rs /Users/alex/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.20/src/format.rs /Users/alex/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.20/src/ident_fragment.rs /Users/alex/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.20/src/to_tokens.rs /Users/alex/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.20/src/runtime.rs /Users/alex/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.20/src/spanned.rs
+
+/Users/alex/near/near-staking/contract/target/debug/deps/quote-0736d599ecbbde19.d: /Users/alex/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.20/src/lib.rs /Users/alex/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.20/src/ext.rs /Users/alex/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.20/src/format.rs /Users/alex/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.20/src/ident_fragment.rs /Users/alex/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.20/src/to_tokens.rs /Users/alex/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.20/src/runtime.rs /Users/alex/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.20/src/spanned.rs
+
+/Users/alex/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.20/src/lib.rs:
+/Users/alex/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.20/src/ext.rs:
+/Users/alex/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.20/src/format.rs:
+/Users/alex/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.20/src/ident_fragment.rs:
+/Users/alex/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.20/src/to_tokens.rs:
+/Users/alex/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.20/src/runtime.rs:
+/Users/alex/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.20/src/spanned.rs:
