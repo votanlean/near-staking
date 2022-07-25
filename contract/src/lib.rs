@@ -1,13 +1,21 @@
-use near_sdk::borsh::{self, BorshDeserialize, BorshSerialize};
 use near_sdk::collections::LookupMap;
+use near_sdk::json_types::U128;
+use near_sdk::borsh::{self, BorshDeserialize, BorshSerialize};
 use near_sdk::serde::{Deserialize, Serialize};
-use near_sdk::{near_bindgen, PanicOnDefault, AccountId, env, BorshStorageKey, Balance, BlockHeight};
+use near_sdk::{env, AccountId, Timestamp, Balance, BlockHeight, EpochHeight, near_bindgen, PanicOnDefault, BorshStorageKey, Promise, PromiseOrValue};
 
 
 use crate::config::*;
 use crate::account::*;
+pub use crate::account::JsonAccount;
+use crate::utils::*;
+use crate::internal::*;
+use enumeration::*;
 mod config;
 mod account;
+mod utils;
+mod internal;
+mod enumeration;
 
 #[derive(BorshDeserialize, BorshSerialize, BorshStorageKey)]
 pub enum StorageKey {
@@ -33,10 +41,12 @@ pub struct StakingContract {
 #[near_bindgen]
 impl StakingContract {
 
+    #[init]
     pub fn new_default_config(owner_id: AccountId, ft_contract_id: AccountId) -> Self {
         Self::new(owner_id, ft_contract_id, Config::default())
     }
 
+    #[init]
     pub fn new(owner_id: AccountId, ft_contract_id: AccountId, config: Config) -> Self {
         StakingContract { owner_id,
             ft_contract_id,
@@ -49,6 +59,21 @@ impl StakingContract {
             accounts: LookupMap::new(StorageKey::AccountKey),
             paused: false,
             pause_in_block: 0, 
+        }
+    }
+
+    #[payable]
+    pub fn create_account(&mut self, account_id: Option<AccountId>) {//is caller may or may not pass account_id, hence use Option. AccountId is truct constructed from account string
+        assert_at_least_one_yocto();
+        let account = account_id.unwrap_or_else(|| env::predecessor_account_id());
+        let staked_account = self.accounts.get(&account);
+        if staked_account.is_some() {
+            refund_deposit(0);
+        } else {
+            let before_storage_usage = env::storage_usage();
+            self.internal_register_account(account.clone());
+            let after_storage_usage = env::storage_usage();
+            refund_deposit(after_storage_usage - before_storage_usage);
         }
     }
 }
